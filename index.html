@@ -1,1 +1,158 @@
 <!DOCTYPE html>
+<html>
+<head>
+        <title>Billy Bonka's Candy Shop
+        </title> 
+        <link rel="icon" href="candy cane.png">
+        <link rel="stylesheet" media="(max-width: 1000px)" href="smallstyle.css">
+        <link rel="stylesheet" media="(min-width: 1001px)" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script language="javascript">
+                function myFunction() {
+                                var links = document.getElementById("mobileLinks");
+                                if (links.style.display === "block") {
+                                        links.style.display = "none";
+                                } 
+                                else {
+                                        links.style.display = "block";
+                                }
+                                
+                        } 
+        </script>
+        <style>
+                h2 {
+                        text-align: center;
+                        font-family: Verdana;
+                }
+                .slideshow{
+                        max-width: 500px;
+                        position: relative;
+                        margin: auto;
+                }
+                /* .slides {
+                        display: none;
+                } */
+                .prev, .next {
+                        cursor: pointer;
+                        position: absolute;
+                        top: 50%;
+                        width: auto;
+                        margin-top: -22px;
+                        padding: 16px;
+                        color: white;
+                        font-weight: bold;
+                        font-size: 18px;
+                        transition: 0.6s ease;
+                        border-radius: 0 3px 3px 0;
+                        user-select: none;
+                }
+                .next {
+                        right: 0;
+                        border-radius: 3px 0 0 3px;
+                }
+                #description{
+                        text-align: center;
+                        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                        overflow-wrap: normal;
+                        margin-bottom: 30px;
+                }
+        </style>
+</head>
+
+<body>
+        <div class = "banner">
+                <h1>
+                        <a href="index.html" ><img src="candy_logo.png" height="180px" width="180px"></a>
+                </h1>
+        </div>
+        <div class="nav">
+                <div class="menu">
+                        <a href="shop.html">Order</a>
+                </div>
+                <div class="about">
+                        <a href="CandyAbout.html">About Us</a>
+                </div>
+                <div class="contact">
+                        <a href="contact.html">Contact Us</a>
+                </div>
+                <div class="products">
+                        <a href="products.html">Products</a>
+                </div>
+                <div class="tours">
+                        <a href="page4.html">Tours</a>
+                </div>
+                <div class="catering">
+                        <a href="page5.html">Catering</a>
+                </div>
+                <div id="mobileLinks">
+                        <a href="shop.html">Order</a>
+                        <a href="CandyAbout.html">About Us</a>
+                        <a href="contact.html">Contact Us</a>
+                        <a href="products.html">Products</a>
+                        <a href="page4.html">Tours</a>
+                        <a href="page5.html">Catering</a>
+                </div>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                </a>  
+        </div>
+        <h2>
+                Welcome to the Billy Bonka Candy Shop! Come in and shop today!
+        </h2> 
+        <div class="slideshow">
+                <div class="mySlides">
+                        <img src="candys/chocbar.jpg" style="width: 100%">
+                </div>
+                <div class="mySlides">
+                        <img src="candys/assorted.jpg" style="width: 100%">
+                </div>
+                <div class="mySlides">
+                        <img src="candys/bears.jpg" style="width: 100%">
+                </div>
+                <a class="prev" onclick="prevSlide()">&#10094;</a>
+                <a class="next" onclick="nextSlide()">&#10095;</a>
+        </div>
+        <div id="description">
+                With all candies handmade by Billy Bonka himself, our quality is always assured! <br>
+                Product of the day: The Bonka Bar!<br>
+                The Bonka Bar is always made with freshly hand ground beans, roasted every morning and made live right in front of you!
+                If you choose to order online, all bars will be freshly hardened right before shipping.
+                
+        </div>
+
+        <footer class="footer">
+                Contact us at 123-456-7890, or WillyBonka@WillyBonka.com!
+        </footer>
+</body>
+<script language="javascript">
+                var currentSlide = 0;
+                function prevSlide() {
+                        if(currentSlide === 0) {
+                                currentSlide = 2;
+                                showSlides(currentSlide);
+                        }
+                        else {
+                                showSlides(currentSlide--);
+                        }
+                }
+                function nextSlide() {
+                        if (currentSlide === 2) {
+                                currentSlide = 0;
+                                showSlides(currentSlide);
+                        }
+                        else {
+                                showSlides(currentSlide++);
+                        }
+                        
+                }
+                function showSlides(index) {
+                        var mySlides = document.getElementsByClassName("mySlides");
+                        for (let i = 0; i < mySlides.length; i++) {
+                                mySlides[i].style.display = "none";
+                        }
+                        mySlides[currentSlide].style.display = "block";
+                }
+                showSlides(currentSlide);
+</script>
+</html>

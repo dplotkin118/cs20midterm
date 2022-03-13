@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Page</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" media="(max-width: 1000px)" href="smallstyle.css">
+        <link rel="stylesheet" media="(min-width: 1001px)" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script language="javascript">
+            function myFunction() {
+                var links = document.getElementById("mobileLinks");
+                if (links.style.display === "block") {
+                    links.style.display = "none";
+                }
+                else {
+                    links.style.display = "block";
+                }
+
+            }
+        </script>
+        <style>
+            .pictureshift {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 50%;
+            }
+            .contactheader{
+                text-align:center;
+            }
+            .contacttext {
+                text-align:center;
+                font-family: Verdana;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="banner">
+            <h1>
+                <a href="index.html"><img src="candy_logo.png" height="180px" width="180px"></a>
+            </h1>
+        </div>
+        <div class="nav">
+            <div class="menu">
+                <a href="shop.html">Order</a>
+            </div>
+            <div class="about">
+                <a href="CandyAbout.html">About Us</a>
+            </div>
+            <div class="contact">
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <div class="products">
+                <a href="products.html">Products</a>
+            </div>
+            <div class="tours">
+                <a href="page4.html">Tours</a>
+            </div>
+            <div class="catering">
+                <a href="page5.html">Catering</a>
+            </div>
+            <div id="mobileLinks">
+                <a href="shop.html">Order</a>
+                <a href="CandyAbout.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="products.html">Products</a>
+                <a href="page4.html">Tours</a>
+                <a href="page5.html">Catering</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        
+        </div>
+        <h1 class="contactheader">Contact Page</h1>
+        <p class= "contacttext biggertext">
+            Do you want to know more about all of the types of candy we have?
+        </p>
+        <p class="contacttext">
+            Contact Us! Call us at 123-456-7890, email WillyBonka@WillyBonka.com, or come in and visit today!
+        </p>
+        <img class = "pictureshift" src="https://cdn.pixabay.com/photo/2017/12/02/14/38/contact-us-2993000__480.jpg"/>
+        <footer class= "footer">
+            Contact us at 123-456-7890, or WillyBonka@WillyBonka.com!
+        </footer>
+    </body>
+</html>
